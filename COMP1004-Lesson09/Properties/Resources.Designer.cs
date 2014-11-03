@@ -69,5 +69,15 @@ namespace COMP1004_Lesson09.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2014_01_01__6_ {
+            get {
+                object obj = ResourceManager.GetObject("2014-01-01 (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

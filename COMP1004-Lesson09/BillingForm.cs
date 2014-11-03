@@ -233,10 +233,13 @@ namespace COMP1004_Lesson09
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Create instance about box
+            AboutBox myAboutBox = new AboutBox();
+            myAboutBox.ShowDialog();
             //show a message box with application details
-            String messageString;
+            /*String messageString;
             messageString = "R 'n R Billing application \nProgrammed by: Luis Acevedo";
-            MessageBox.Show(messageString, "About Us", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Me-ssageBox.Show(messageString, "About Us", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
 
         }
 
