@@ -1,6 +1,6 @@
 ﻿/*
  * Name: Luis Acevedo
- * Date: Sept., 2014
+ * Date: Oct., 2014
  * Purpose: For a coffee shop, this project calculates the amount due based on the user selection.
  * It accumulates summary information that can be displayed as required.
  *
@@ -206,8 +206,34 @@ namespace COMP1004_Lesson09
             }
         }
 
+        //Shows the summary information
         private void summaryButton_Click(object sender, EventArgs e)
         {
+            //instance variables
+            decimal averageDecimal;
+
+            if (totalDecimal != 0)
+            {
+                newOrderButton_Click(sender, e);
+            }
+
+            if (customerCountInteger > 0)
+            {
+                averageDecimal = grandTotalDecimal / customerCountInteger;
+                SummaryForm mySummaryForm = new SummaryForm();
+
+                //Call the property procedures
+                mySummaryForm.averageSales = averageDecimal;
+                mySummaryForm.totalSales = grandTotalDecimal;
+                mySummaryForm.numberOfSales = customerCountInteger;
+
+                mySummaryForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No sales summary information to show", "Sales Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            /*
             //show the summary information to the user
             decimal averageDecimal;
             string messageString;
@@ -229,6 +255,7 @@ namespace COMP1004_Lesson09
             {
                 MessageBox.Show("No sales summary information to show", "Sales Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+             */
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
