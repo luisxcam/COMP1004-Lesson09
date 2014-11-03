@@ -16,6 +16,8 @@ namespace COMP1004_Lesson09
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            SplashScreen mySplashScreen = new SplashScreen();
+            mySplashScreen.ShowDialog();
             Application.Run(new BillingForm());
         }
     }
